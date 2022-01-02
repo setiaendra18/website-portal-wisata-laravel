@@ -3,7 +3,7 @@
       <!-- Brand -->
       <div class="sidenav-header  align-items-center">
         <a class="navbar-brand" href="javascript:void(0)">
-          <img src="backend/assets/img/brand/brand.png"  alt="...">
+          <img src="{{url('backend/assets/img/brand/brand.png')}}"  alt="...">
         </a>
       </div>
       <div class="navbar-inner">
@@ -12,19 +12,19 @@
           <!-- Nav items -->
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" href="dashboard.html">
+              <a class="nav-link active" href="{{url('admin')}}">
                 <i class="ni ni-tv-2 text-primary"></i>
                 <span class="nav-link-text">Dashboard</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="icons.html">
+              <a class="nav-link" href={{url('manajemen-wisata')}}>
                 <i class="ni ni-planet text-orange"></i>
                 <span class="nav-link-text">Data Wisata</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="map.html">
+              <a class="nav-link" href="{{route('manajemen-kategori-wisata')}}">
                 <i class="ni ni-pin-3 text-primary"></i>
                 <span class="nav-link-text">Kategori Wisata</span>
               </a>
