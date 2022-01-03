@@ -36,7 +36,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="login.html">
+              <a class="nav-link" href="{{route('manajemen-fasilitas-wisata')}}">
                 <i class="ni ni-key-25 text-info"></i>
                 <span class="nav-link-text">Fasilitas</span>
               </a>

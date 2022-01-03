@@ -7,10 +7,12 @@
         <div class="header-body">
           <div class="row align-items-center py-4">
             <div class="col-lg-6 col-7">
-              <h6 class="h2 text-white d-inline-block mb-0">Data Wisata</h6>
+              <h6 class="h2 text-white d-inline-block mb-0">Data fasilitas Wisata</h6>
+           
             </div>
             <div class="col-lg-6 col-5 text-right">
-              <a href="{{url('add-wisata')}}" class="btn btn-sm btn-success">Tambah Data</a>
+              <a href="{{url('add-fasilitas-wisata')}}" class="btn btn-sm btn-success">Tambah Data</a>
+           
             </div>
           </div>
         </div>
@@ -18,6 +20,7 @@
     </div>
     <!-- Page content -->
     <div class="container-fluid mt--6">
+   
       <div class="row">
         <div class="col-xl-12">
           @if (session('success'))
@@ -28,6 +31,7 @@
               </button>
           </div>
           @endif
+
           @if (session('error'))
           <div class="alert alert-error">
               {{ session('error') }}
@@ -37,38 +41,38 @@
           </div>
           @endif
           <div class="card">
+         
             <div class="table-responsive">
               <!-- Projects table -->
               <table class="table align-items-center table-flush">
                 <thead class="thead-light">
                   <tr>
                     <th scope="col">No</th>
-                    <th scope="col">NAMA WISATA</th>
-                    <th scope="col">HTM</th> 
-                    <th scope="col">EVENT</th>
-                    <th scope="col">KONTAK PENGELOLA</th>                
+                    <th scope="col">NAMA fasilitas</th>              
                     <th scope="col">AKSI</th>
                   </tr>
                 </thead>
                 <tbody>
-                  @foreach ($data_wisata as $data)
+                  @foreach ($data_fasilitas as $data)
                   <tr>
                     <th scope="row">{{$loop->iteration}}</th>
-                    <td>{{$data->nama_wisata}}</td>
-                    <td>Rp.{{number_format($data->harga_tiket)}}</td>
-                    <td>asdf</td>
-                    <td>{{$data->kontak_pengelola}}</td>
+                    <td>{{$data->nama_fasilitas}}</td>
+                
                     <td>
-                      <a href="{{url('detail-wisata')}}/{{$data->id}}" class="btn btn-sm btn-primary">Detail</a>
-                     <a href="{{url('edit-wisata')}}/{{$data->id}}" class="btn btn-sm btn-warning">edit</a>
-                     <a href="{{url('delete-wisata')}}/{{$data->id}}" class="btn btn-sm btn-danger">hapus</a>
+                     <a href="{{url('edit-fasilitas-wisata')}}/{{$data->id}}" class="btn btn-sm btn-warning">edit</a>
+                     <a href="{{url('delete-fasilitas-wisata')}}/{{$data->id}}" class="btn btn-sm btn-danger">hapus</a>
                     </td>
                   </tr>
                   @endforeach
+                  
                 </tbody>
               </table>
             </div>
           </div>
         </div>
+
       </div>
+
+
 @endsection
+   
