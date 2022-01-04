@@ -23,6 +23,22 @@
 <script src="{{url('backend/assets/vendor/chart.js/dist/Chart.extension.js')}}></script>
 <!-- Argon JS -->
 <script src="{{url('backend/assets/js/argon.js?v=1.2.0')}}></script>
+<script type="text/javascript">
+
+  $(document).ready(function() {
+
+    $(".btn-success").click(function(){ 
+        var html = $(".clone").html();
+        $(".increment").after(html);
+    });
+
+    $("body").on("click",".btn-danger",function(){ 
+        $(this).parents(".control-group").remove();
+    });
+
+  });
+
+</script>
 </body>
 
 </html>

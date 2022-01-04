@@ -86,6 +86,15 @@
                                                 </div>
                                             @endforeach
                                         </div>
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="input-address">Gambar</label>
+                                            <div class="user-image mb-3 text-center">
+                                                <div class="imgPreview"> </div>
+                                            </div>
+                                            <div class="input-group control-group increment" >
+                                                <input type="file" name="imageFile[]" class="custom-file-input" id="images" multiple="multiple">
+                                              </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <button type="submit" class="btn btn-sm btn-primary">SIMPAN DATA</button>
