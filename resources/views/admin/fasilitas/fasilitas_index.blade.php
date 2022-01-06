@@ -11,7 +11,7 @@
            
             </div>
             <div class="col-lg-6 col-5 text-right">
-              <a href="{{url('add-fasilitas-wisata')}}" class="btn btn-sm btn-success">Tambah Data</a>
+              <a href="{{route('add-fasilitas-wisata')}}" class="btn btn-sm btn-success">Tambah Data</a>
            
             </div>
           </div>
@@ -59,8 +59,8 @@
                     <td>{{$data->nama_fasilitas}}</td>
                 
                     <td>
-                     <a href="{{url('edit-fasilitas-wisata')}}/{{$data->id}}" class="btn btn-sm btn-warning">edit</a>
-                     <a href="{{url('delete-fasilitas-wisata')}}/{{$data->id}}" class="btn btn-sm btn-danger">hapus</a>
+                     <a href="{{route('edit-fasilitas-wisata',$data->id)}}" class="btn btn-sm btn-warning">edit</a>
+                     <a href="{{route('del-fasilitas-wisata',$data->id)}}" class="btn btn-sm btn-danger">hapus</a>
                     </td>
                   </tr>
                   @endforeach

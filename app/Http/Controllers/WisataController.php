@@ -1,5 +1,7 @@
 <?php
 namespace App\Http\Controllers;
+
+use App\Models\M_event;
 use App\Models\M_fasilitas;
 use App\Models\M_kategori;
 use App\Models\M_wisata;
@@ -11,8 +13,8 @@ class WisataController extends Controller
     {
         $data_wisata = M_wisata::all();
         return view('admin.wisata.wisata_index', [
-            'data_wisata' => $data_wisata
-        ]);
+             'data_wisata' => $data_wisata,
+         ]);
     }
     public function add()
     {
