@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Models\M_event;
@@ -6,15 +7,20 @@ use App\Models\M_fasilitas;
 use App\Models\M_kategori;
 use App\Models\M_wisata;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class WisataController extends Controller
 {
     public function index()
     {
-        $data_wisata = M_wisata::all();
-        return view('admin.wisata.wisata_index', [
-             'data_wisata' => $data_wisata,
-         ]);
+        if (Auth::check()) {
+            $data_wisata = M_wisata::all();
+            return view('admin.wisata.wisata_index', [
+                'data_wisata' => $data_wisata,
+            ]);
+        } else {
+            return view('auth.login');
+        }
     }
     public function add()
     {

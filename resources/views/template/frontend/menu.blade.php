@@ -8,9 +8,9 @@
                 @endforeach
             </ul>
         </li>
-        <li><a href="{{route('event')}}">Event</a></li>
+        <li><a href="{{route('event')}}">Event Wisata</a></li>
+        <li><a href="#">Sesssion aktif sebagai ({{ Auth::user()->name }})</a></li>
        
-        
     </ul>
     <i class="bi bi-list mobile-nav-toggle"></i>
 </nav><!-- .navbar -->
