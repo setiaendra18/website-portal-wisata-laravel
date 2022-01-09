@@ -45,7 +45,6 @@
                                     <th scope="col">No</th>
                                     <th scope="col">NAMA WISATA</th>
                                     <th scope="col">HTM</th>
-                                    <th scope="col">EVENT</th>
                                     <th scope="col">KONTAK PENGELOLA</th>
                                     <th scope="col">AKSI</th>
                                 </tr>
@@ -56,24 +55,19 @@
                                         <th scope="row">{{ $loop->iteration }}</th>
                                         <td>{{ $data->nama_wisata }}</td>
                                         <td>Rp.{{ number_format($data->harga_tiket) }}</td>
-                                        <td></td>
                                         <td>{{ $data->kontak_pengelola }}</td>
                                         <td>
                                             <?php
                                             $cek_foto = DB::table('galeri')
                                                 ->where('id_wisata', '=', $data->id)
                                                 ->get();
-                                            
                                             ?>
                                             @if ($cek_foto->isEmpty())
                                                 <a href="{{ route('upload-images', $data->id) }}"
                                                     class="btn btn-sm btn-info">Upload images</a>
-
                                             @else
-                                                <a href="#"
-                                                    class="btn btn-sm btn-dark disabled">images uploaded</a>
+                                                <a href="#" class="btn btn-sm btn-dark disabled">images uploaded</a>
                                             @endif
-
                                             <a href="{{ route('detail-wisata', $data->id) }}"
                                                 class="btn btn-sm btn-primary">Detail</a>
                                             <a href="{{ route('edit-wisata', $data->id) }}"

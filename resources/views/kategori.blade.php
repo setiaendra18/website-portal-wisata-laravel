@@ -13,7 +13,7 @@
                         @foreach ($wisata as $data)
                             <div class="col-sm-4 mt-4">
                                 <div class="card">
-                                    <img src="{{ url('assets/img/blog/blog-1.jpg') }}" class="card-img-top">
+                                    <img src="{{ url('assets/img/blog/sample.jpg') }}" class="card-img-top">
                                     <div class="card-body">
                                         
                                         <h5 class="card-title">{{ $data->nama_wisata }}</h5>

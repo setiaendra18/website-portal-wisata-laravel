@@ -8,7 +8,7 @@
                     <div class="col-lg-12 mt-5 entries">
                         <article class="entry entry-single">
                             <div class="entry-img">
-                                <img src="{{url('assets/img/blog/blog-1.jpg')}}" alt="" class="img-fluid">
+                                <img src="{{ url('assets/img/blog/sample.jpg') }}" alt="" class="img-fluid">
                             </div>
                             <h2 class="entry-title">
                                 {{ $data_wisata->nama_wisata }}
@@ -20,14 +20,11 @@
                                 </p>
                                 <hr>
                                 <h3>Fasilitas Umum :</h3>
-                             
-                                @if ($data_wisata->fasilitas != '')
-                                    @foreach (explode(',', $data_wisata->fasilitas) as $info)
-                                        <li>{{ $info }}</li>
-                                    @endforeach
-                                @endif
+                                <?php
+                                    $data_array = explode(',', $data_wisata->fasilitas);
+                                    echo '<pre>'; print_r($data_array); echo '</pre>';
+                                ?>
                                 <hr>
-
                                 <h3 class="mb-4">Harga Tiket :</h3>
                                 <div class=row>
                                     <div class="col-sm-2">
@@ -50,14 +47,12 @@
                                         <div class="card border-primary text-center">
                                             <div class="card-body">
                                                 <h4>MAPS</h4>
-                                                <a href="https://maps.google.com/?q={{ $data_wisata->gmaps }}" target=_blank>Klik disini</a>
+                                                <a href="https://maps.google.com/?q={{ $data_wisata->gmaps }}"
+                                                    target=_blank>Klik disini</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
-
-
                             </div>
                             <hr>
                         </article><!-- End blog entry -->

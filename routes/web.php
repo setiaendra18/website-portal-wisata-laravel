@@ -1,10 +1,15 @@
 <?php
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\FasilitasController;
 use App\Http\Controllers\WisataController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\HomeController;
+use Illuminate\Support\Facades\Auth;
+
+Auth::routes();
+
 
 Route::get('/',  [HomeController::class, 'index'])->name('home');
 Route::get('/kategori/{id}', [HomeController::class, 'kategori'])->name('kategori-search');
@@ -15,7 +20,7 @@ Route::get('/wisata-detail/{id}', [HomeController::class, 'detail'])->name('wisa
 Route::get('adm/manajemen-wisata',  [WisataController::class, 'index'])->name('manajemen-wisata');
 Route::get('adm/add-wisata', [WisataController::class, 'add'])->name('add-wisata');
 Route::get('adm/edit-wisata', [WisataController::class, 'add'])->name('edit-wisata');
-Route::get('adm/detail-wisata', [WisataController::class, 'add'])->name('detail-wisata');
+Route::get('adm/detail-wisata/{id}', [WisataController::class, 'detail'])->name('detail-wisata');
 Route::post('adm/wisata-store', [WisataController::class, 'store'])->name('wisata-store');
 Route::get('adm/delete-wisata/{id}', [WisataController::class, 'delete'])->name('delete-wisata');
 Route::get('adm/upload-images/{id}', [WisataController::class, 'delete'])->name('upload-images');
@@ -40,6 +45,5 @@ Route::post('adm/event-store', [EventController::class, 'store'])->name('event-s
 Route::get('adm/delete-event-wisata/{id}', [EventController::class, 'delete'])->name('del-event-wisata');
 Route::get('adm/edit-event-wisata/{id}', [EventController::class, 'edit'])->name('edit-event-wisata');
 Route::post('adm/event-update/{id}', [EventController::class, 'update'])->name('event-update');
-Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+

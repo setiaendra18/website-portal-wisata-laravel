@@ -8,6 +8,7 @@ use App\Models\M_kategori;
 use App\Models\M_wisata;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class WisataController extends Controller
 {
@@ -95,6 +96,16 @@ class WisataController extends Controller
     {
         $wisata = M_wisata::findOrFail($id);
         return view('admin.wisata.wisata_edit', [
+            'data_wisata' => $wisata
+        ]);
+    }
+    public function detail($id)
+    {
+        $wisata = M_wisata::findOrFail($id);
+        // $wisata = DB::table('wisata')
+        //     ->leftJoin('kategori_wisata', 'wisata.id_kategori', '=', 'kategori_wisata.id')
+        //     ->get();
+        return view('admin.wisata.wisata_detail', [
             'data_wisata' => $wisata
         ]);
     }

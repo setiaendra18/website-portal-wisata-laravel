@@ -15,45 +15,44 @@
                     <li class="nav-item">
                         <a class="nav-link {{ request()->is('adm/manajemen-wisata') ? 'active' : '' }}"
                             href={{ route('manajemen-wisata') }}>
-                            <i class="ni ni-planet text-orange"></i>
+                            <i class="fa fa-map-signs text-orange"></i>
                             <span class="nav-link-text">Data Wisata</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {{ request()->is('adm/manajemen-kategori-wisata') ? 'active' : '' }}"
                             href="{{ route('manajemen-kategori-wisata') }}">
-                            <i class="ni ni-pin-3 text-primary"></i>
+                            <i class="fa fa-landmark text-primary"></i>
                             <span class="nav-link-text">Kategori Wisata</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {{ request()->is('adm/manajemen-event') ? 'active' : '' }}"
                             href="{{ route('manajemen-event') }}">
-                            <i class="ni ni-single-02 text-yellow"></i>
+                            <i class="fa fa-calendar-check text-yellow"></i>
                             <span class="nav-link-text">Event</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {{ request()->is('adm/manajemen-fasilitas-wisata') ? 'active' : '' }}"
                             href="{{ route('manajemen-fasilitas-wisata') }}">
-                            <i class="ni ni-key-25 text-info"></i>
+                            <i class="fa fa-restroom text-info"></i>
                             <span class="nav-link-text">Fasilitas</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="tables.html">
-                            <i class="ni ni-bullet-list-67 text-default"></i>
+                        <a class="nav-link {{ request()->is('adm/manajemen-fasilitas-wisata') ? 'active' : '' }}"
+                            href="{{ route('manajemen-fasilitas-wisata') }}">
+                            <i class="fa fa-users text-default"></i>
                             <span class="nav-link-text">Users</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/logout">
-                            <i class="ni ni-bullet-list-67 text-default"></i>
+                            <i class="fa fa-sign-out-alt text-danger"></i>
                             <span class="nav-link-text text-danger">(logout)</span>
                         </a>
                     </li>
-
-
                 </ul>
                 <!-- Divider -->
                 <hr class="my-3">
