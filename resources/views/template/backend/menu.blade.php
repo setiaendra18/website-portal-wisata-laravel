@@ -40,13 +40,7 @@
                             <span class="nav-link-text">Fasilitas</span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link {{ request()->is('adm/manajemen-fasilitas-wisata') ? 'active' : '' }}"
-                            href="{{ route('manajemen-fasilitas-wisata') }}">
-                            <i class="fa fa-users text-default"></i>
-                            <span class="nav-link-text">Users</span>
-                        </a>
-                    </li>
+               
                     <li class="nav-item">
                         <a class="nav-link" href="/logout">
                             <i class="fa fa-sign-out-alt text-danger"></i>

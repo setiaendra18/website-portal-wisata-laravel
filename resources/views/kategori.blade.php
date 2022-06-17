@@ -9,11 +9,28 @@
                 <div class="clearfix"></div>
                 <div class="row mt-5 mb-5">
                     <h4>Kategori Wisata : {{ $data_kategori_id->nama_kategori }}</h4>
+                   
                     @if ($wisata->count() > 0)
                         @foreach ($wisata as $data)
+                        @php
+                        $cek_foto = DB::table('galeri')
+                            ->where('id_wisata', '=', $data->id)
+                    ->get();
+                
+                $gambar = DB::table('galeri')
+                            ->where('id_wisata', '=', $data->id)
+                            ->first();
+                    @endphp
                             <div class="col-sm-4 mt-4">
                                 <div class="card">
-                                    <img src="{{ url('assets/img/blog/sample.jpg') }}" class="card-img-top">
+                                   
+                                    @if ($cek_foto->isEmpty())
+                                    <img src="{{ url('assets/img/no_image.jpg') }}" alt="" class="img-fluid">
+                                    @else
+                                        <img src="{{ asset('img/galeri/' . $gambar->nama_gambar) }}"
+                                             title="" alt="" class="img-fluid">
+                                    @endif
+                                    
                                     <div class="card-body">
                                         
                                         <h5 class="card-title">{{ $data->nama_wisata }}</h5>

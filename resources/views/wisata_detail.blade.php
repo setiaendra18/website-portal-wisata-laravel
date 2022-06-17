@@ -8,7 +8,21 @@
                     <div class="col-lg-12 mt-5 entries">
                         <article class="entry entry-single">
                             <div class="entry-img">
-                                <img src="{{ url('assets/img/blog/sample.jpg') }}" alt="" class="img-fluid">
+                                @php
+                                    $cek_foto = DB::table('galeri')
+                                        ->where('id_wisata', '=', $data_wisata->id)
+                    ->get();
+                
+                $gambar = DB::table('galeri')
+                                        ->where('id_wisata', '=', $data_wisata->id)
+                                        ->first();
+                                @endphp
+                                @if ($cek_foto->isEmpty())
+                                    <img src="{{ url('assets/img/no_image.jpg') }}" alt="" class="img-fluid">
+                                @else
+                                    <img src="{{ asset('img/galeri/' . $gambar->nama_gambar) }}" title=""
+                                        alt="" class="img-fluid">
+                                @endif
                             </div>
                             <h2 class="entry-title">
                                 {{ $data_wisata->nama_wisata }}
@@ -20,10 +34,9 @@
                                 </p>
                                 <hr>
                                 <h3>Fasilitas Umum :</h3>
-                                <?php
-                                    $data_array = explode(',', $data_wisata->fasilitas);
-                                    echo '<pre>'; print_r($data_array); echo '</pre>';
-                                ?>
+                                {{ $data_wisata->fasilitas }}
+
+
                                 <hr>
                                 <h3 class="mb-4">Harga Tiket :</h3>
                                 <div class=row>

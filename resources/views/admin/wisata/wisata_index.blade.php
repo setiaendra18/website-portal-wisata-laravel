@@ -43,6 +43,7 @@
                             <thead class="thead-light">
                                 <tr>
                                     <th scope="col">No</th>
+                                    <th>FOTO</th>
                                     <th scope="col">NAMA WISATA</th>
                                     <th scope="col">HTM</th>
                                     <th scope="col">KONTAK PENGELOLA</th>
@@ -51,22 +52,42 @@
                             </thead>
                             <tbody>
                                 @foreach ($data_wisata as $data)
+                                    @php
+                                        $cek_foto = DB::table('galeri')
+                                            ->where('id_wisata', '=', $data->id)
+                                    ->get();
+                                
+                                $gambar = DB::table('galeri')
+                                            ->where('id_wisata', '=', $data->id)
+                                            ->first();
+                                    @endphp
                                     <tr>
                                         <th scope="row">{{ $loop->iteration }}</th>
+                                        <td>
+                                            @if ($cek_foto->isEmpty())
+                                                {{ 'Gambar Kosong' }}
+                                            @else
+                                                <img src="{{ asset('img/galeri/' . $gambar->nama_gambar) }}" alt=""
+                                                    title="" width="30%">
+                                            @endif
+
+                                        </td>
                                         <td>{{ $data->nama_wisata }}</td>
                                         <td>Rp.{{ number_format($data->harga_tiket) }}</td>
                                         <td>{{ $data->kontak_pengelola }}</td>
                                         <td>
-                                            <?php
-                                            $cek_foto = DB::table('galeri')
-                                                ->where('id_wisata', '=', $data->id)
-                                                ->get();
-                                            ?>
+
+
+
+                                            {{ $data->nama_gambar }}
                                             @if ($cek_foto->isEmpty())
-                                                <a href="{{ route('upload-images', $data->id) }}"
-                                                    class="btn btn-sm btn-info">Upload images</a>
+                                                <a href="{{ route('foto-upload', $data->id) }}"
+                                                    class="btn btn-sm btn-info">Upload Gambar</a>
                                             @else
-                                                <a href="#" class="btn btn-sm btn-dark disabled">images uploaded</a>
+                                                <a href="{{ route('foto-edit', $data->id) }}"
+                                                    class="btn btn-sm btn-dark">Edit Gambar</a>
+                                                    <a href="{{ route('foto-hapus', $gambar->id) }}"
+                                                        class="btn btn-danger btn-sm">hapus gambar</a>
                                             @endif
                                             <a href="{{ route('detail-wisata', $data->id) }}"
                                                 class="btn btn-sm btn-primary">Detail</a>
