@@ -7,7 +7,7 @@ https://jelajahkalbar.com/
 ```
 git clone https://github.com/setiaendra18/website-portal-wisata-laravel
 ```
-### JALANKAM TERMINAL GIT DI FOLDER WEBSITE DANDUPLIKAT .ENV FILES
+### JALANKAN TERMINAL GIT DI FOLDER WEBSITE DAN DUPLIKAT .ENV FILES
 ```
 cp .env.enxample .env
 ```
@@ -39,18 +39,18 @@ php artisan serve
 http://127.0.0.1:8000/ (Halaman Utama)
 http://127.0.0.1:8000/login (Halaman Admin)
 ```
-### PASSWROD DEFAULT
+### AKUN PASSWROD DEFAULT
 ```
 email : admin@gmail.com
 password : asdfasdf
 ```
-
-### PASTIKAN LATOP/KOMPUTER TERINSTALL
+### PASTIKAN LATOP/KOMPUTER TERINSTALL (TIDAK SESUAI SPESIFIKASI BISA MENYEBABKAN ERROR)
 ```
 PHP Minimal Versi 7.4
-MYSQL 5.7
-Git/Github
+MYSQL Minimal Versi 5.7
+Git/Github 
 Composer
+Visual Studio Codes (rekomendasi)
 ```
 ### REFRENSI BELAJAR
 ```
@@ -59,6 +59,8 @@ Cara Backup/DOwnload file cpanel versi 2 : https://www.rumahweb.com/journal/cara
 Cara export database cpanel : https://www.rumahweb.com/journal/cara-export-database-di-phpmyadmin/
 Belajar Bootstraps : https://getbootstrap.com/
 Belajar laravel :https://laravel.com/docs/9.x/installation
+Belajar SQL : https://www.w3schools.com/sql/
+Belajar MVC : https://www.duniailkom.com/tutorial-belajar-laravel-pengertian-mvc-model-view-controller/
 HTML DAN PHP : https://www.w3schools.com/
 
 ```
