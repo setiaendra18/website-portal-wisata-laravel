@@ -65,6 +65,7 @@ Belajar laravel :https://laravel.com/docs/9.x/installation
 Belajar SQL : https://www.w3schools.com/sql/
 Belajar MVC : https://www.duniailkom.com/tutorial-belajar-laravel-pengertian-mvc-model-view-controller/
 HTML DAN PHP : https://www.w3schools.com/
+Backup : https://drive.google.com/drive/folders/1s2V7o4PuZypxvxxNcynuj2bu6lJt7swx?usp=sharing
 
 ```
 
