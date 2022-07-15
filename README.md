@@ -1,3 +1,6 @@
+
+<hr>
+
 ## CARA INSTALL APLIKASI DI LAPTOP/KOMPUTER
 ### DOMAIN WEBSITE :
 ```console
@@ -64,3 +67,7 @@ Belajar MVC : https://www.duniailkom.com/tutorial-belajar-laravel-pengertian-mvc
 HTML DAN PHP : https://www.w3schools.com/
 
 ```
+
+<br>
+<br>
+<blockquote><h1>Jendela Dunia dan Membaca Adalah Kuncinya.</1></blockquote>
