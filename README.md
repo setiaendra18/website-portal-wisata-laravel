@@ -25,13 +25,13 @@ DB_PASSWORD= (sesuaikan dengan komputer)
 ```
 ### PASTIKAN XAMPP/LARAGON SUDAH JALAN
 ### IMPORT DATABASE KE PHPMYADMIN DARI FOLDER SQL
-### JALANKAN GENERATE KEY DI TERMINAL
-```console
-php artisan key:generate
-```
 ### JALANKAN COMPOSER DI TERMINAL
 ```console
 composer install
+```
+### JALANKAN GENERATE KEY DI TERMINAL
+```console
+php artisan key:generate
 ```
 ### JALANKAN PHPMYADMIN DI TERMINAL
 ```console
