@@ -12,7 +12,7 @@ git clone https://github.com/setiaendra18/website-portal-wisata-laravel
 ```
 ### JALANKAN TERMINAL GIT DI FOLDER WEBSITE DAN DUPLIKAT .ENV FILES
 ```console
-cp .env.enxample .env
+cp .env.example .env
 ```
 ### MODIFIKASI SETTING DI .ENV
 ```javascript
