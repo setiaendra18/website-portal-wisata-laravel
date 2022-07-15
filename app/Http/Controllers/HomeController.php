@@ -22,7 +22,7 @@ class HomeController extends Controller
         $keyword = $request->id;
         $data_kategori = M_kategori::all();
         $data_kategori_id = M_kategori::find($keyword);
-        $wisata = M_wisata::where('id_kategori', $keyword)->paginate(5);
+        $wisata = M_wisata::where('id_kategori', $keyword)->paginate(15);
         return view('kategori', [
             'data_kategori' => $data_kategori,
             'data_kategori_id' => $data_kategori_id,
