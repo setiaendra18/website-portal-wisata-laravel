@@ -1,9 +1,17 @@
 ## CARA INSTALL APLIKASI DI LAPTOP/KOMPUTER
-### Clone Repository
+### DOMAIN WEBSITE :
+```
+https://jelajahkalbar.com/
+```
+### CLONE REPOSITORY
 ```
 git clone https://github.com/setiaendra18/website-portal-wisata-laravel
 ```
-### Rubah Config .ENV
+### JALANKAM TERMINAL GIT DI FOLDER WEBSITE DANDUPLIKAT .ENV FILES
+```
+cp .env.enxample .env
+```
+### MODIFIKASI SETTING DI .ENV
 ```
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -12,21 +20,21 @@ DB_DATABASE=zada_portal_wisata (sesuaikan dengan komputer)
 DB_USERNAME=root (sesuaikan dengan komputer)
 DB_PASSWORD= (sesuaikan dengan komputer)
 ```
-### IMPORT DATABASE KE PHPMYADMIN FOLDER SQL
 ### PASTIKAN XAMPP/LARAGON SUDAH JALAN
-### JALANKAN GENERATE KEY 
+### IMPORT DATABASE KE PHPMYADMIN DARI FOLDER SQL
+### JALANKAN GENERATE KEY DI TERMINAL
 ```
 php artisan key:generate
 ```
-### JALANKAN COMPOSER
+### JALANKAN COMPOSER DI TERMINAL
 ```
 composer install
 ```
-### Jalankan PHP Artisan di terimal
+### JALANKAN PHPMYADMIN DI TERMINAL
 ```
 php artisan serve
 ```
-### Akses URL
+### AKSES ROUTING URL
 ```
 http://127.0.0.1:8000/ (Halaman Utama)
 http://127.0.0.1:8000/login (Halaman Admin)
@@ -36,10 +44,21 @@ http://127.0.0.1:8000/login (Halaman Admin)
 email : admin@gmail.com
 password : asdfasdf
 ```
-###PASTIKAN LATOP/KOMPUTER TERINSTALL
+
+### PASTIKAN LATOP/KOMPUTER TERINSTALL
 ```
 PHP Minimal Versi 7.4
 MYSQL 5.7
 Git/Github
 Composer
+```
+### REFRENSI BELAJAR
+```
+Cara Backup/Download file cpanel versi 1 : https://www.jetorbit.com/panduan/cara-download-file-di-cpanel/
+Cara Backup/DOwnload file cpanel versi 2 : https://www.rumahweb.com/journal/cara-export-database-di-phpmyadmin/
+Cara export database cpanel : https://www.rumahweb.com/journal/cara-export-database-di-phpmyadmin/
+Belajar Bootstraps : https://getbootstrap.com/
+Belajar laravel :https://laravel.com/docs/9.x/installation
+HTML DAN PHP : https://www.w3schools.com/
+
 ```
