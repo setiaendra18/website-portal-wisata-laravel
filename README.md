@@ -113,5 +113,10 @@ Hasil Pengujian: https://youtu.be/IQfkLW0vS3M
 <li>Backup : https://drive.google.com/drive/folders/1s2V7o4PuZypxvxxNcynuj2bu6lJt7swx?usp=sharing</li>
 </ol>
 
+### Update Akses Log (bukti user mengakses)
+<ol>
+<li>https://s.id/1cua1 19 Juli 2022</li>
+</ol>
+
 <br>
 <blockquote><h1>Jendela Dunia dan Membaca Adalah Kuncinya.</1></blockquote>
